@@ -1,0 +1,201 @@
+/* --------------------------------- GENERAL -------------------------------- */
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+
+a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+h1 {
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 35px;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 2px;
+}
+
+li a {
+    font-size: 27px;    
+}
+
+.btn {
+    border-radius: 50px;
+    padding: 20px 60px;
+    color: white;
+    /* background-color: rgba(255, 255, 255, 0.2); */
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.2));
+    box-shadow: 1px 1px 0px white;
+    width: 35%;
+    text-align: center;
+
+}
+
+.btn:hover {
+    transition: all 0.4s;
+    transform: scale(1.03);
+    /* background: linear-gradient(45deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.2)); */
+    background-color: white;
+    color: black;
+    mix-blend-mode: exclusion;
+
+}
+
+a .fa-solid, a .fa-brands {
+    font-size: 22px;
+    margin-right: 10px;    
+}
+
+/* ----------------------------------- NAV ---------------------------------- */
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header {
+    height: 100vh;
+    width: 100%;
+    background-image: url(../img/bg-liquid.jpg);
+    background-size: cover;
+}
+
+nav {
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 70px;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.toggle {
+    display:none;
+    font-size: 30px;
+    padding: 0px 50px;
+    color: white;
+    z-index: 9999;
+}
+
+nav .btn {
+    background-color: transparent;
+}
+
+.logo {
+    padding: 0px 50px;
+    color: white;
+    font-size: 30px;
+    z-index: 9999;
+} 
+
+img {
+    width: 100%;
+}
+
+
+/* --------------------------------- HEADER --------------------------------- */
+
+#header-content {
+    flex-direction: column;
+    width: 100%;
+    height: 80vh;
+    padding-top: 100px;
+}
+
+#logo {
+    width: 40%;
+}
+
+#logo img {
+    border-radius: 150px;
+}
+
+#bottom-icon {
+    color: white;
+    font-size: 22px;
+    width: 20%;
+}
+
+/* ------------------------------- RESPONSIVE ------------------------------- */
+
+@media screen and (max-width: 780px){
+    /* .menu {
+        display: none;
+    } */
+    
+    .toggle {
+        display: block;
+    }
+
+    .menu {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: black;
+        flex-direction: column;
+        justify-content: space-around;
+        text-align: center;
+        transform: translateX(-100%);
+    }
+
+    .menu div {
+        justify-content: space-between;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .menu ul {
+        height: 30vh;
+        flex-direction: column;
+        display:flex;
+        justify-content: space-around;
+
+    }
+    .menu a {
+        margin-top: 50px;
+        width: 40%;
+    }
+
+    .toggle {
+        position:relative;
+        z-index: 9999;
+    }
+
+    .nav-open .menu {
+        transform: translateX(0);
+    }
+
+    .open{
+        display: block!important;
+    } 
+
+    .close {
+        display: none!important;
+    }
+
+    .nav-open .open {
+        display: none!important;
+    }
+
+    .nav-open .close {
+        display: block!important;
+    }
+};
